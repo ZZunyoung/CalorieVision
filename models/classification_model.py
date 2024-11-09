@@ -5,7 +5,7 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator
 import os
 
 class FoodImageClassifier:
-    def __init__(self, img_size=256, batch_size=32, epochs=20, train_dir='./assets/resized_image/train', val_dir='./assets/resized_image/validation'):
+    def __init__(self, img_size=224, batch_size=32, epochs=20, train_dir='./assets/resized_image/train', val_dir='./assets/resized_image/validation'):
         """
         초기 설정 및 하이퍼파라미터 정의
         Parameters:
