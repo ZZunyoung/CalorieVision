@@ -1,4 +1,4 @@
-#resize.py
+# resize.py
 
 train과 validation 폴더가 있어야 함
 
@@ -6,7 +6,7 @@ train과 validation 폴더가 있어야 함
 
 ------------------------------------------------
 
-#rename.py
+# rename.py
 
 resize시 한글을 읽지 못함. 양 추정 이미지 이름을 읽지 못함
 
