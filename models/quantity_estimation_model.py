@@ -73,7 +73,6 @@ history = model.fit(
     train_data,
     epochs=30,
     validation_data=val_data,
-    #callbacks=[early_stopping],
-    #class_weight=class_weights
+    callbacks=[early_stopping],
 )
 
