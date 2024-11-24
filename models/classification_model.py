@@ -94,6 +94,7 @@ class FoodImageClassifier:
         return history
 
     def evaluate_and_plot_confusion_matrix(self, test_generator):
+        plt.rcParams['font.family'] = 'AppleGothic'
         predictions = self.model.predict(test_generator)
         predicted_classes = np.argmax(predictions, axis=1)
         true_classes = test_generator.classes
