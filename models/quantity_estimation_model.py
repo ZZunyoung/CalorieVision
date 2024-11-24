@@ -11,8 +11,8 @@ from tensorflow.keras.callbacks import ReduceLROnPlateau
 
 
 # 데이터 경로 설정
-train_dir = r'C:\Users\when0\Desktop\대학교\3학년 2학기\기계학습기초\food_quantity\sample\train'   # test 폴더 경로
-val_dir = r'C:\Users\when0\Desktop\대학교\3학년 2학기\기계학습기초\food_quantity\sample\validation'  # validation 폴더 경로
+train_dir = r'C:\Users\jel06\OneDrive\바탕 화면\food_quantity\train\닭볶음탕'   # test 폴더 경로
+val_dir = r'C:\Users\jel06\OneDrive\바탕 화면\food_quantity\validation\닭볶음탕'  # validation 폴더 경로
 
 # 이미지 데이터 제너레이터 설정
 train_datagen = ImageDataGenerator(
@@ -25,6 +25,7 @@ train_datagen = ImageDataGenerator(
     horizontal_flip=True,
     fill_mode='nearest'
 )
+
 val_datagen = ImageDataGenerator(rescale=1./255)
 
 # 데이터 로드
@@ -52,9 +53,9 @@ model = Sequential([
     Conv2D(128, (3, 3), activation='relu'),
     MaxPooling2D((2, 2)),
     Flatten(),
-    Dense(256, activation='relu'),
+    Dense(512, activation='relu'),
     Dropout(0.5),
-    Dense(3, activation='softmax')  # Q3, Q4, Q5 분류
+    Dense(5, activation='softmax')  # Q1, Q2, Q3, Q4, Q5 분류
 ])
 
 # 모델 컴파일
@@ -73,6 +74,5 @@ history = model.fit(
     train_data,
     epochs=30,
     validation_data=val_data,
-    callbacks=[early_stopping],
+    callbacks=[early_stopping]
 )
-
