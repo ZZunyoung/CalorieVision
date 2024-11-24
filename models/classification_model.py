@@ -12,7 +12,7 @@ import pandas as pd
 
 class FoodImageClassifier:
     def __init__(self, img_size=224, batch_size=32, epochs=50):  # 초기 에포크를 크게 설정
-        base_dir = 
+        base_dir = ".." # CalorieVision/models 경로에서 classfication_model.py를 실행시킨다고 할 때
         self.train_dir = os.path.join(base_dir, "assets", "resized_image", "train")
         self.val_dir = os.path.join(base_dir, "assets", "resized_image", "validation")
         self.test_dir = os.path.join(base_dir, "assets", "resized_image", "test")  # 테스트 데이터 경로 추가
